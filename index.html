@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>shawncothran (Shawn Cothran)</title>
+
+    <link rel="stylesheet" href="styles/css.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="bower_components/octicons/octicons/octicons.css">
+
+    <link rel="icon" type="image/x-icon" class="octicon octicon-favicon">
+
+  </head>
+
+  <body>
+
+    <header class="topHeader">
+      <nav class="pageAction">
+        <a href="#"><span class="mega-octicon octicon-mark-github"></span></a>
+        <input type="text" name="name" placeholder="Search GitHub">
+        <a href="#">Pull requests</a>
+        <a href="#">Issues</a>
+        <a href="#">Gist</a>
+      </nav>
+      <nav class="userAction">
+        <a href="#"><span class="octicon octicon-bell"></span></a>
+        <a href="#"><span class="octicon octicon-plus"></span><span class="octicon octicon-triangle-down"></span></a>
+        <a href="#"><img class="avatar" /><span class="octicon octicon-triangle-down"></span></a>
+      </nav>
+    </header>
+    <main>
+      <aside>
+        <img class="avatar" />
+        <h1 class="name"></h1>
+        <h2 class="username"></h2>
+        <h3 class="location"></h3>
+        <h3 class="joined">Joined on </h3>
+        <nav>
+          <section>
+            {num}
+            <span>Followers</span>
+          </section>
+          <section>
+            {num}
+            <span>Starred</span>
+          </section>
+          <section>
+            {num}
+            <span>Following</span>
+          </section>
+        </nav>
+        <h2>Organizations</h2>
+        <img src="" alt="" />
+      </aside>
+      <section class="tabContent">
+        <header>
+          <nav class="tabs">
+            <a href="#"><span class="octicon octicon-plus"></span> Contributions</a>
+            <a href="index.html"><span class="octicon octicon-repo"> Repositories</span></a>
+            <a href="#"><span class="octicon octicon-rss"> Public activity</span></a>
+          </nav>
+          <button type="button" name="button"><span class="octicon octicon-pencil">Edit profile</span></button>
+        </header>
+        <section class="repos">
+          <header>
+            <nav class="repoSelect">
+              <input type="text" name="name" placeholder="Find a repository...">
+              <button class="search" for='name' type="button" name="search">Search</button>
+              <a href="#">All</a>
+              <a href="#">Public</a>
+              <a href="#">Private</a>
+              <a href="#">Sources</a>
+              <a href="#">Forks</a>
+              <a href="#">Mirrors</a>
+            </nav>
+            <button type="button" name="button"><span class="octicon octicon-repo">New</span></button>
+          </header>
+        </section>
+      </section>
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="scripts/token.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
+
+  </body>
+
+</html>
