@@ -16,10 +16,6 @@ body {
     }
   }
 }
-button {
-  float: right;
-  border-radius: 3px;
-}
 nav.pageAction {
   @include span-columns(8);
   padding: 10px 8px 8px 0px;
@@ -33,8 +29,10 @@ nav.pageAction {
   input {
     font-size: 12px;
     margin: 0 0 0 6px;
-    line-height: 14px;
+    line-height: 15px;
     vertical-align: top;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     width: 360px;
     padding: 5px;
   }
@@ -85,26 +83,17 @@ main {
   .tabContent {
     @include span-columns(9);
     @include outer-container(100%);
+    header {
+      @include span-columns(12);
+    }
     nav.tabs {
       @include span-columns(8);
-      a {
-        border: 1px solid #e2e2e2;
-        &:hover {
-          border-bottom: 0;
-        }
-      }
-    }
-    .octicon-plus {
-      border: 2px solid #333;
-      padding: 0 0 0 2px;
-      width: 20px;
     }
     header {
       border-bottom: 1px solid #e2e2e2;
     }
   }
 }
-
 aside {
   @include span-columns(3);
   .avatar {
@@ -112,11 +101,47 @@ aside {
     border-radius: 6px;
   }
 }
-
+nav.tabs {
+  z-index: 77;
+  position: relative;
+}
+.tabs a {
+  color: #555;
+  line-height: 36px;
+  font-size: 14px;
+  padding: 10px;
+  &:hover, &.active {
+    border: 1px solid #e2e2e2;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    z-index: 99;
+    .octicon-plus {
+        border-color: #4078C0;
+    }
+  }
+}
+.tabs .octicon-plus {
+  border: 1px solid #555;
+  border-radius: 1px;
+  padding: 0 0 0 2px;
+  width: 14px;
+  height: 14px;
+  font-size: 12px;
+}
+.repoHead {
+  padding: 15px 0 0 0;
+}
 .repos {
   @include span-columns(12);
+  input {
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 260px;
+    padding: 9px;
+  }
   nav.repoSelect {
-    @include span-columns(9);
+    @include span-columns(12);
   }
   button.search {
     float: none;
@@ -137,4 +162,18 @@ aside {
     color: #888;
     font-weight: normal;
   }
+}
+.edit {
+  background: #fff;
+  outline: none;
+  border: 1px solid #e2e2e2;
+}
+.new {
+  background: #fff;
+  outline: none;
+  border: 1px solid #e2e2e2;
+}
+button {
+  float: right;
+  border-radius: 3px;
 }

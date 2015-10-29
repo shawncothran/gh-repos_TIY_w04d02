@@ -382,10 +382,6 @@ body {
       width: 20px;
       border-radius: 3px; }
 
-button {
-  float: right;
-  border-radius: 3px; }
-
 nav.pageAction {
   float: left;
   display: block;
@@ -403,8 +399,10 @@ nav.pageAction {
   nav.pageAction input {
     font-size: 12px;
     margin: 0 0 0 6px;
-    line-height: 14px;
+    line-height: 15px;
     vertical-align: top;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     width: 360px;
     padding: 5px; }
 
@@ -469,6 +467,13 @@ main {
       clear: both;
       content: "";
       display: table; }
+    main .tabContent header {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      main .tabContent header:last-child {
+        margin-right: 0; }
     main .tabContent nav.tabs {
       float: left;
       display: block;
@@ -476,14 +481,6 @@ main {
       width: 65.88078%; }
       main .tabContent nav.tabs:last-child {
         margin-right: 0; }
-      main .tabContent nav.tabs a {
-        border: 1px solid #e2e2e2; }
-        main .tabContent nav.tabs a:hover {
-          border-bottom: 0; }
-    main .tabContent .octicon-plus {
-      border: 2px solid #333;
-      padding: 0 0 0 2px;
-      width: 20px; }
     main .tabContent header {
       border-bottom: 1px solid #e2e2e2; }
 
@@ -498,6 +495,34 @@ aside {
     width: 230px;
     border-radius: 6px; }
 
+nav.tabs {
+  z-index: 77;
+  position: relative; }
+
+.tabs a {
+  color: #555;
+  line-height: 36px;
+  font-size: 14px;
+  padding: 10px; }
+  .tabs a:hover, .tabs a.active {
+    border: 1px solid #e2e2e2;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    z-index: 99; }
+    .tabs a:hover .octicon-plus, .tabs a.active .octicon-plus {
+      border-color: #4078C0; }
+
+.tabs .octicon-plus {
+  border: 1px solid #555;
+  border-radius: 1px;
+  padding: 0 0 0 2px;
+  width: 14px;
+  height: 14px;
+  font-size: 12px; }
+
+.repoHead {
+  padding: 15px 0 0 0; }
+
 .repos {
   float: left;
   display: block;
@@ -505,11 +530,17 @@ aside {
   width: 100%; }
   .repos:last-child {
     margin-right: 0; }
+  .repos input {
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 260px;
+    padding: 9px; }
   .repos nav.repoSelect {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 74.41059%; }
+    width: 100%; }
     .repos nav.repoSelect:last-child {
       margin-right: 0; }
   .repos button.search {
@@ -527,3 +558,17 @@ aside {
     font-size: 12px;
     color: #888;
     font-weight: normal; }
+
+.edit {
+  background: #fff;
+  outline: none;
+  border: 1px solid #e2e2e2; }
+
+.new {
+  background: #fff;
+  outline: none;
+  border: 1px solid #e2e2e2; }
+
+button {
+  float: right;
+  border-radius: 3px; }

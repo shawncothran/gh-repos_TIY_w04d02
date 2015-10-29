@@ -53,19 +53,19 @@
           </section>
         </nav>
         <h2>Organizations</h2>
-        <img src="" alt="" />
+        <a href="/theironyard-frontend-nashville" aria-label="theironyard-frontend-nashville" class="tooltipped tooltipped-n avatar-group-item" itemprop="follows"><img alt="@theironyard-frontend-nashville" src="https://avatars2.githubusercontent.com/u/12956562?v=3&amp;s=84"></a>
       </aside>
       <section class="tabContent">
         <header>
           <nav class="tabs">
             <a href="#"><span class="octicon octicon-plus"></span> Contributions</a>
-            <a href="index.html"><span class="octicon octicon-repo"> Repositories</span></a>
-            <a href="#"><span class="octicon octicon-rss"> Public activity</span></a>
+            <a href="index.html" class="active"><span class="octicon octicon-repo"></span> Repositories</a>
+            <a href="#"><span class="octicon octicon-rss"></span> Public activity</a>
           </nav>
-          <button type="button" name="button"><span class="octicon octicon-pencil">Edit profile</span></button>
+          <button class="edit" type="button" name="button"><span class="octicon octicon-pencil">Edit profile</span></button>
         </header>
         <section class="repos">
-          <header>
+          <header class="repoHead">
             <nav class="repoSelect">
               <input type="text" name="name" placeholder="Find a repository...">
               <button class="search" for='name' type="button" name="search">Search</button>
@@ -75,8 +75,8 @@
               <a href="#">Sources</a>
               <a href="#">Forks</a>
               <a href="#">Mirrors</a>
+              <button class="new" type="button" name="button"><span class="octicon octicon-repo">New</span></button>
             </nav>
-            <button type="button" name="button"><span class="octicon octicon-repo">New</span></button>
           </header>
         </section>
       </section>
@@ -87,6 +87,7 @@
     </footer>
 
     <script src="scripts/token.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="scripts/main.js"></script>
 
