@@ -78,6 +78,18 @@
               <button class="new" type="button" name="button"><span class="octicon octicon-repo">New</span></button>
             </nav>
           </header>
+
+          <script type="text/template" id="repoItem">
+            <article class='repo'>
+              <h2>
+                <a href=' <%= html_url %> '> <%= name %></a>
+              </h2>
+              <h3>
+                Updated <%= moment(time).fromNow() %>
+              </h3>
+            </article>
+          </script>
+
         </section>
       </section>
 
@@ -87,6 +99,7 @@
     </footer>
 
     <script src="scripts/token.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="scripts/main.js"></script>
